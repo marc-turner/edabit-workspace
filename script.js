@@ -44,12 +44,12 @@
 
 // console.log(reverseCase('Happy Birthday'));
 
-const isSpecialArray = (arr) =>
-    arr.every(
-        (x, i) => (x % 2 === 0 && i % 2 === 0) || (x % 2 === 1 && i % 2 === 1)
-    );
+// const isSpecialArray = (arr) =>
+//     arr.every(
+//         (x, i) => (x % 2 === 0 && i % 2 === 0) || (x % 2 === 1 && i % 2 === 1)
+//     );
 
-console.log(isSpecialArray([2, 7, 8, 8, 6, 1, 6, 3]));
+// console.log(isSpecialArray([2, 7, 8, 8, 6, 1, 6, 3]));
 
 // isSpecialArray([2, 7, 4, 9, 6, 1, 6, 3]) ➞ true
 // Even indices: [2, 4, 6, 6]; Odd indices: [7, 9, 1, 3]
@@ -59,3 +59,47 @@ console.log(isSpecialArray([2, 7, 8, 8, 6, 1, 6, 3]));
 
 // isSpecialArray([2, 7, 8, 8, 6, 1, 6, 3]) ➞ false
 // Index 3 has an even number 8.
+
+// function indexShuffle(str) {
+//     return (
+//         [...str].filter((x, i) => i % 2 === 0).join('') +
+//         [...str].filter((x, i) => i % 2 === 1).join('')
+//     );
+// }
+
+// console.log(indexShuffle('abcdefg'));
+
+// function isPrefix(word, prefix) {
+//     return word.startsWith([...prefix].filter((x) => x !== '-').join(''));
+// }
+
+// function isSuffix(word, suffix) {
+//     return word.endsWith([...suffix].filter((x) => x !== '-').join(''));
+// }
+
+// console.log(isSuffix('arachnophobia', '-phobia'));
+
+// isPrefix("automation", "auto-") ➞ true
+
+// isSuffix("arachnophobia", "-phobia") ➞ true
+
+// isPrefix("retrospect", "sub-") ➞ false
+
+// isSuffix("vocation", "-logy") ➞ false
+
+function asciiCapitalize(str) {
+    return str
+        .split('')
+        .map((x) =>
+            x.charCodeAt(0) % 2 === 0 ? x.toUpperCase() : x.toLowerCase()
+        )
+        .join('');
+}
+
+console.log(asciiCapitalize('to be or not to be!'));
+
+// asciiCapitalize("to be or not to be!") ➞ "To Be oR NoT To Be!"
+
+// asciiCapitalize("THE LITTLE MERMAID") ➞ "THe LiTTLe meRmaiD"
+
+// asciiCapitalize("Oh what a beautiful morning.") ➞ "oH wHaT a BeauTiFuL moRNiNg."
