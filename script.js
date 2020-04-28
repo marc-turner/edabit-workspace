@@ -87,19 +87,60 @@
 
 // isSuffix("vocation", "-logy") ➞ false
 
-function asciiCapitalize(str) {
-    return str
-        .split('')
-        .map((x) =>
-            x.charCodeAt(0) % 2 === 0 ? x.toUpperCase() : x.toLowerCase()
-        )
-        .join('');
-}
+// function asciiCapitalize(str) {
+//     return str
+//         .split('')
+//         .map((x) =>
+//             x.charCodeAt(0) % 2 === 0 ? x.toUpperCase() : x.toLowerCase()
+//         )
+//         .join('');
+// }
 
-console.log(asciiCapitalize('to be or not to be!'));
+// console.log(asciiCapitalize('to be or not to be!'));
 
 // asciiCapitalize("to be or not to be!") ➞ "To Be oR NoT To Be!"
 
 // asciiCapitalize("THE LITTLE MERMAID") ➞ "THe LiTTLe meRmaiD"
 
 // asciiCapitalize("Oh what a beautiful morning.") ➞ "oH wHaT a BeauTiFuL moRNiNg."
+
+// function spelling(str) {
+//     let newArr = [];
+//     for (let i = 1; i < str.length + 1; i++) {
+//         let strPart = str.slice(0, i);
+//         newArr.push(strPart);
+//     }
+//     return newArr;
+// }
+
+// console.log(spelling('eagerly'));
+
+// spelling("bee") ➞ ["b", "be", "bee"]
+
+// spelling("happy") ➞ ["h", "ha", "hap", "happ", "happy"]
+
+// spelling("eagerly") ➞ ["e", "ea", "eag", "eage", "eager", "eagerl", "eagerly"]
+
+// const findNemo = (sentence) =>
+//     sentence.split(' ').includes('Nemo')
+//         ? `I found Nemo at ${sentence.split(' ').indexOf('Nemo') + 1}!`
+//         : "I can't find Nemo :(";
+
+// console.log(findNemo('Is it Nemos, Nemona, Nemoor or Garfield?'));
+
+// findNemo("I am finding Nemo !") ➞ "I found Nemo at 4!"
+
+// findNemo("Nemo is me") ➞ "I found Nemo at 1!"
+
+// findNemo("I Nemo am") ➞ "I found Nemo at 2!"
+
+const capToFront = (s) =>
+    s.match(/[A-Z]/g).join('').concat(s.match(/[a-z]/g).join(''));
+
+console.log(capToFront('hApPy'));
+
+// capToFront("hApPy") ➞ "APhpy"
+
+// capToFront("moveMENT") ➞ "MENTmove"
+
+// capToFront("shOrtCAKE") ➞ "OCAKEshrt"
