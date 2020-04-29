@@ -134,10 +134,10 @@
 
 // findNemo("I Nemo am") ➞ "I found Nemo at 2!"
 
-const capToFront = (s) =>
-    s.match(/[A-Z]/g).join('').concat(s.match(/[a-z]/g).join(''));
+// const capToFront = (s) =>
+//     s.match(/[A-Z]/g).join('').concat(s.match(/[a-z]/g).join(''));
 
-console.log(capToFront('hApPy'));
+// console.log(capToFront('hApPy'));
 
 // capToFront("hApPy") ➞ "APhpy"
 
