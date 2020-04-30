@@ -48,14 +48,44 @@ console.log('CONNNECTED');
 
 // 'b' + 'o'.repeat(n) + 'm';
 
-function oneOddOneEven(n) {
-    return !(Math.floor(n / 10) % 2 === (n % 10) % 2);
-}
+// function oneOddOneEven(n) {
+//     return !(Math.floor(n / 10) % 2 === (n % 10) % 2);
+// }
 
-console.log(oneOddOneEven(22));
+// console.log(oneOddOneEven(22));
 
 // oneOddOneEven(12) ➞ true
 
 // oneOddOneEven(55) ➞ false
 
 // oneOddOneEven(22) ➞ false
+
+// const totalVolume = (...boxes) =>
+//     boxes.map((x) => x[0] * x[1] * x[2]).reduce((c, i) => c + i);
+
+// console.log(totalVolume([4, 2, 4], [3, 3, 3], [1, 1, 2], [2, 1, 1]));
+
+// totalVolume([4, 2, 4], [3, 3, 3], [1, 1, 2], [2, 1, 1]) ➞ 63
+
+// totalVolume([2, 2, 2], [2, 1, 1]) ➞ 10
+
+// totalVolume([1, 1, 1]) ➞ 1
+
+function createPhoneNumber(numbers) {
+    return (
+        '(' +
+        numbers.slice(0, 3).join('') +
+        ') ' +
+        numbers.slice(3, 6).join('') +
+        '-' +
+        numbers.slice(6, 10).join('')
+    );
+}
+
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) ➞ "(123) 456-7890"
+
+// createPhoneNumber([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]) ➞ "(111) 111-1111"
+
+// createPhoneNumber([8, 7, 4, 1, 2, 5, 6, 5, 8, 2]) ➞ "(874) 125-6582"
