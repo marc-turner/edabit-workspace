@@ -89,3 +89,47 @@ console.log('CONNNECTED');
 // createPhoneNumber([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]) ➞ "(111) 111-1111"
 
 // createPhoneNumber([8, 7, 4, 1, 2, 5, 6, 5, 8, 2]) ➞ "(874) 125-6582"
+
+// function transformUpvotes(str) {
+//     return str
+//         .split(' ')
+//         .map((x) => (x.includes('k') ? +x.slice(0, x.length - 1) * 1000 : +x));
+// }
+
+// console.log(transformUpvotes('5.5k 8.9k 32'));
+
+// transformUpvotes("6.8k 13.5k") ➞ [6800, 13500]
+
+// transformUpvotes("5.5k 8.9k 32") ➞ [5500, 8900, 32]
+
+// transformUpvotes("20.3k 3.8k 7.7k 992") ➞ [20300, 3800, 7700, 992]
+
+// function identicalFilter(arr) {
+//     return arr.filter((x) => new Set(x).size === 1);
+// }
+
+// console.log(identicalFilter(['aaaaaa', 'bc', 'd', 'eeee', 'xyz']));
+
+// identicalFilter(["aaaaaa", "bc", "d", "eeee", "xyz"])
+// ➞ ["aaaaaa", "d", "eeee"]
+
+// identicalFilter(["88", "999", "22", "545", "133"])
+// ➞ ["88", "999", "22"]
+
+// identicalFilter(["xxxxo", "oxo", "xox", "ooxxoo", "oxo"])
+// ➞ []
+
+function factorChain(arr) {
+    arr.slice(1);
+    return arr;
+}
+
+console.log(factorChain([1, 2, 4, 8, 16, 32]));
+
+// factorChain([1, 2, 4, 8, 16, 32]) ➞ true
+
+// factorChain([1, 1, 1, 1, 1, 1]) ➞ true
+
+// factorChain([2, 4, 6, 7, 12]) ➞ false
+
+// factorChain([10, 1]) ➞ false
