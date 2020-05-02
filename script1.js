@@ -119,12 +119,12 @@ console.log('CONNNECTED');
 // identicalFilter(["xxxxo", "oxo", "xox", "ooxxoo", "oxo"])
 // ➞ []
 
-function factorChain(arr) {
-    arr.slice(1);
-    return arr;
-}
+// function factorChain(arr) {
+//     arr.slice(1);
+//     return arr;
+// }
 
-console.log(factorChain([1, 2, 4, 8, 16, 32]));
+// console.log(factorChain([1, 2, 4, 8, 16, 32]));
 
 // factorChain([1, 2, 4, 8, 16, 32]) ➞ true
 
@@ -133,3 +133,32 @@ console.log(factorChain([1, 2, 4, 8, 16, 32]));
 // factorChain([2, 4, 6, 7, 12]) ➞ false
 
 // factorChain([10, 1]) ➞ false
+
+// const specialReverse = (s, c) =>
+//     s
+//         .split(' ')
+//         .map((x) => (x.startsWith(c) ? x.split('').reverse().join('') : x))
+//         .join(' ');
+
+// console.log(specialReverse('first man to walk on the moon', 'm'));
+
+// specialReverse("word searches are super fun", "s")
+// ➞ "word sehcraes are repus fun"
+
+// specialReverse("first man to walk on the moon", "m")
+// ➞ "first nam to walk on the noom"
+
+// specialReverse("peter piper picked pickled peppers", "p")
+// ➞ "retep repip dekcip delkcip sreppep"
+
+function countTrue(arr) {
+    return arr.filter((x) => x).length;
+}
+
+console.log(countTrue([true, false, false, true, false]));
+
+// countTrue([true, false, false, true, false]) ➞ 2
+
+// countTrue([false, false, false, false]) ➞ 0
+
+// countTrue([]) ➞ 0
