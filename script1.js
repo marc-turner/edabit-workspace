@@ -151,9 +151,9 @@ console.log('CONNNECTED');
 // specialReverse("peter piper picked pickled peppers", "p")
 // ➞ "retep repip dekcip delkcip sreppep"
 
-const countTrue = (arr) => arr.filter((x) => x).length;
+// const countTrue = (arr) => arr.filter((x) => x).length;
 
-console.log(countTrue([true, false, false, true, false]));
+// console.log(countTrue([true, false, false, true, false]));
 
 // countTrue([true, false, false, true, false]) ➞ 2
 
