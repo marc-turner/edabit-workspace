@@ -36,3 +36,54 @@
 // factorGroup(36) ➞ "odd"
 
 // factorGroup(7) ➞ "even"
+
+// const isSafeBridge = str => !str.includes(' ');
+
+// console.log(isSafeBridge('####'));
+
+// isSafeBridge("####") ➞ true
+
+// isSafeBridge("## ####") ➞ false
+
+// isSafeBridge("#") ➞ true
+
+// function changeEnough(change, amountDue) {
+//     let sum = 0;
+//     const coinVals = [0.25, 0.1, 0.05, .01];
+//     for (let i = 0; i < 4; i++) {
+//         sum = sum + change[i] * coinVals[i];
+//     }
+//     return sum > amountDue;
+// }
+
+// console.log(changeEnough([0, 0, 20, 5], 0.75));
+
+// changeEnough([2, 100, 0, 0], 14.11) ➞ false
+
+// changeEnough([0, 0, 20, 5], 0.75) ➞ true
+
+// changeEnough([30, 40, 20, 5], 12.55) ➞ true
+
+// changeEnough([10, 0, 0, 50], 3.85) ➞ false
+
+// changeEnough([1, 0, 5, 219], 19.99) ➞ false
+
+// function isSastry(num) {
+//     return Number.isInteger(
+//         Math.sqrt(+(num.toString() + (num + 1).toString()))
+//     );
+// }
+
+// console.log(isSastry(183));
+
+// isSastry(183) ➞ true
+// // Concatenation of n and its successor = 183184
+// // 183184 is a perfect square (428 ^ 2)
+
+// isSastry(184) ➞ false
+// // Concatenation of n and its successor = 184185
+// // 184185 is not a perfect square
+
+// isSastry(106755) ➞ true
+// // Concatenation of n and its successor = 106755106756
+// // 106755106756 is a perfect square (326734 ^ 2)
