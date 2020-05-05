@@ -87,3 +87,40 @@
 // isSastry(106755) ➞ true
 // // Concatenation of n and its successor = 106755106756
 // // 106755106756 is a perfect square (326734 ^ 2)
+
+// const stripSentence = (str, chars) =>
+//     str.replace(new RegExp(`[^${chars}]`, 'g'), '');
+
+// console.log(
+//     stripSentence('the quick brown fox jumps over the lazy dog', 'aeiou')
+// );
+
+// stripSentence("the quick brown fox jumps over the lazy dog", "aeiou") ➞ "th qck brwn fx jmps vr th lzy dg"
+
+// stripSentence("the hissing snakes sinisterly slither across the rustling leaves", "s") ➞ "the hiing nake initerly lither acro the rutling leave"
+
+// stripSentence("gone, reduced to atoms", "go, muscat nerd") ➞ ""
+
+// function concat(...args) {
+//     return args.flat(1);
+// }
+
+// console.log(concat([1, 2, 3], [4, 5], [6, 7]));
+
+// concat([1, 2, 3], [4, 5], [6, 7]) ➞ [1, 2, 3, 4, 5, 6, 7]
+
+// concat([1], [2], [3], [4], [5], [6], [7]) ➞ [1, 2, 3, 4, 5, 6, 7]
+
+// concat([1, 2], [3, 4]) ➞ [1, 2, 3, 4]
+
+// concat([4, 4, 4, 4, 4]) ➞ [4, 4, 4, 4, 4]
+
+const triangle = (n) => (n === 1 ? 1 : (n * (n + 1)) / 2);
+
+console.log(triangle(215));
+
+// triangle(1) ➞ 1
+
+// triangle(6) ➞ 21
+
+// triangle(215) ➞ 23220
