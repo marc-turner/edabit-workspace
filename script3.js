@@ -29,12 +29,24 @@
 
 // getEquivalent("Bb") ➞"A#"
 
-const longBurp = (num) => 'Bu' + 'r'.repeat(num) + 'p';
+// const longBurp = (num) => 'Bu' + 'r'.repeat(num) + 'p';
 
-console.log(longBurp(5));
+// console.log(longBurp(5));
 
 // longBurp(3) ➞ "Burrrp"
 
 // longBurp(5) ➞ "Burrrrrp"
 
 // longBurp(9) ➞ "Burrrrrrrrrp"
+
+function boxSeq(step) {
+    return step;
+}
+
+console.log(boxSeq(0));
+
+// boxSeq(0) ➞ 0
+
+// boxSeq(1) ➞ 3
+
+// boxSeq(2) ➞ 2
