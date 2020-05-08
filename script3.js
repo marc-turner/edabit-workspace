@@ -39,14 +39,63 @@
 
 // longBurp(9) ➞ "Burrrrrrrrrp"
 
-function boxSeq(step) {
-    return step;
+// const diceGame = (arr) =>
+//     arr.every((x) => x[0] !== x[1]) ? arr.flat().reduce((a, c) => a + c) : 0;
+
+// console.log(
+//     diceGame([
+//         [1, 1],
+//         [5, 6],
+//         [6, 4],
+//     ])
+// );
+
+// diceGame([[1, 2], [3, 4], [5, 6]]) ➞ 21
+
+// diceGame([[1, 1], [5, 6], [6, 4]]) ➞ 0
+
+// diceGame([[4, 5], [4, 5], [4, 5]]) ➞ 27
+
+// const filterUnique = (arr) => arr.filter((x) => new Set(x).size === x.length);
+
+// console.log(filterUnique(['88', '999', '989', '9988', '9898']));
+
+// filterUnique(["abb", "abc", "abcdb", "aea", "bbb"]) ➞ ["abc"]
+// // "b" occurs in "abb" more than once, "b" occurs in "abcdb" more than once, etc.
+
+// filterUnique(["88", "999", "989", "9988", "9898"]) ➞ []
+
+// filterUnique(["ABCDE", "DDEB", "BED", "CCA", "BAC"]) ➞ ["ABCDE", "BED", "BAC"]
+
+// const testJackpot = (result) => new Set(result).size === 1;
+
+// console.log(testJackpot(['&&', '&', '&&&', '&&&&']));
+
+// testJackpot(["@", "@", "@", "@"]) ➞ true
+
+// testJackpot(["abc", "abc", "abc", "abc"]) ➞ true
+
+// testJackpot(["SS", "SS", "SS", "SS"]) ➞ true
+
+// testJackpot(["&&", "&", "&&&", "&&&&"]) ➞ false
+
+// testJackpot(["SS", "SS", "SS", "Ss"]) ➞ false
+
+// Fix this broken code!
+function checkEquals(arr1, arr2) {
+    if (arr1.toString() === arr2.toString()) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-console.log(boxSeq(0));
+console.log(checkEquals([1, 2], [1, 2]));
 
-// boxSeq(0) ➞ 0
+// checkEquals([1, 2], [1, 3]) ➞ false
 
-// boxSeq(1) ➞ 3
+// checkEquals([1, 2], [1, 2]) ➞ true
 
-// boxSeq(2) ➞ 2
+// checkEquals([4, 5, 6], [4, 5, 6]) ➞ true
+
+// checkEquals([4, 7, 6], [4, 5, 6]) ➞ false
