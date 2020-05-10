@@ -60,7 +60,7 @@
 // indexMultiplier([-3, 0, 8, -6]) ➞ -2
 // // (-3*0 + 0*1 + 8*2 + -6*3)
 
-const removeLeadingTrailing = (n) => +n.toString();
+const removeLeadingTrailing = (n) => (+n).toString();
 
 console.log(removeLeadingTrailing('30'));
 
