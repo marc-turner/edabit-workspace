@@ -1,79 +1,29 @@
-// function redundant(str) {
-//     return function f1() {
-//         return str;
-//     };
-// }
+// const boxSeq = (step) => (step === 0 ? 0 : step % 2 === 0 ? step : step + 2);
 
-// console.log(redundant('apple'));
+// console.log(boxSeq(99));
 
-// const f1 = redundant("apple")
-// f1() ➞ "apple"
+// boxSeq(0) ➞ 0
 
-// const f2 = redundant("pear")
-// f2() ➞ "pear"
+// boxSeq(1) ➞ 3
 
-// const f3 = redundant("")
-// f3() ➞ ""
+// boxSeq(2) ➞ 2
 
-// const formatMath = (expr) => `${expr} = ${eval(expr.replace('x', '*'))}`;
+// const xmasItems = (n) => (n * (n + 1) * (n + 2)) / 6;
 
-// console.log(formatMath('4 x 5'));
+// console.log(xmasItems(0));
 
-// formatMath("3 + 4") ➞ "3 + 4 = 7"
+// xmasItems(12) ➞ 364
 
-// formatMath("3 - 2") ➞ "3 - 2 = 1"
+// xmasItems(3) ➞ 10
 
-// formatMath("4 x 5") ➞ "4 x 5 = 20"
+// xmasItems(31) ➞ 5456
 
-// formatMath("6 / 3") ➞ "6 / 3 = 2"
+// const countOnes = (i) => i.toString(2).replace(/0/g, '').length;
 
-// const catchZeroDivision = (expr) => !isFinite(expr);
+// console.log(countOnes(999));
 
-// console.log(catchZeroDivision('0 / 0'));
+// countOnes(0) ➞ 0
 
-// catchZeroDivision("2 / 0") ➞ true
+// countOnes(100) ➞ 3
 
-// catchZeroDivision("4 / (2 + 3 - 5)") ➞ true
-
-// catchZeroDivision("2 * 5 - 10") ➞ false
-
-// function removeEnemies(names, enemies) {
-//     return names.filter((x) => !enemies.includes(x));
-// }
-
-// console.log(removeEnemies(['John', 'Emily', 'Steve', 'Sam'], ['Sam', 'John']));
-
-// removeEnemies(["Fred"], []) ➞ ["Fred"]
-
-// removeEnemies(["Adam", "Emmy", "Tanya", "Emmy"], ["Emmy"]) ➞ ["Adam", "Tanya"]
-
-// removeEnemies(["John", "Emily", "Steve", "Sam"], ["Sam", "John"]) ➞ ["Emily", "Steve"]
-
-// const indexMultiplier = (arr) =>
-//     arr.length ? arr.map((x, i) => x * i).reduce((c, a) => c + a) : 0;
-
-// console.log(indexMultiplier([-3, 0, 8, -6]));
-
-// indexMultiplier([1, 2, 3, 4, 5]) ➞ 40
-// // (1*0 + 2*1 + 3*2 + 4*3 + 5*4)
-
-// indexMultiplier([-3, 0, 8, -6]) ➞ -2
-// // (-3*0 + 0*1 + 8*2 + -6*3)
-
-const removeLeadingTrailing = (n) => (+n).toString();
-
-console.log(removeLeadingTrailing('30'));
-
-// removeLeadingTrailing("230.000") ➞ "230"
-
-// removeLeadingTrailing("00402") ➞ "402"
-
-// removeLeadingTrailing("03.1400") ➞ "3.14"
-
-// removeLeadingTrailing("30") ➞ "30"
-
-// return n.includes('.')
-//     ? n.replace(/(0+)$/, '').replace(/^0+/, '')
-//     : n.replace(/^0+/, '');
-
-// return +n % 1 === 0 ? +n.toString() : +n ;
+// countOnes(999) ➞ 8
