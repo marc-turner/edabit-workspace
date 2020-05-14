@@ -62,11 +62,9 @@
 
 // wordNest("incredible", "increinincrincredibleediblecredibledible") ➞ 3
 
-function uniqueSort(arr) {
-    return Array.from(new Set(arr)).sort((a, b) => a - b);
-}
+// const uniqueSort = (arr) => Array.from(new Set(arr)).sort((a, b) => a - b);
 
-console.log(uniqueSort([1, 2, 4, 3, 10]));
+// console.log(uniqueSort([1, 2, 4, 3, 10]));
 
 // uniqueSort([1, 2, 4, 3]) ➞ [1, 2, 3, 4]
 
