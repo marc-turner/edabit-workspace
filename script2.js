@@ -80,17 +80,17 @@
 
 // changeTypes([false, "false", "true"]) ➞ [true, "False!", "True!"]
 
-function tpChecker(home) {
-    let amountNeeded = home.people * 57 * 14;
-    let amountHave = home.tp * 500;
-    let tpSupplyLen = Math.floor(amountHave / (amountNeeded / 14));
-    if (amountNeeded > amountHave) {
-        return `Your TP will only last ${tpSupplyLen} days, buy more!`;
-    }
-    return `Your TP will last ${tpSupplyLen} days, no need to panic!`;
-}
+// function tpChecker(home) {
+//     let amountNeeded = home.people * 57 * 14;
+//     let amountHave = home.tp * 500;
+//     let tpSupplyLen = Math.floor(amountHave / (amountNeeded / 14));
+//     if (amountNeeded > amountHave) {
+//         return `Your TP will only last ${tpSupplyLen} days, buy more!`;
+//     }
+//     return `Your TP will last ${tpSupplyLen} days, no need to panic!`;
+// }
 
-console.log(tpChecker({ people: 2, tp: 4 }));
+// console.log(tpChecker({ people: 2, tp: 4 }));
 
 // {people: 4, tp:1} ➞ "Your TP will only last 2 days, buy more!"
 
