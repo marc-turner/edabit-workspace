@@ -42,12 +42,12 @@
 
 // XO("zzoo") ➞ false
 
-function capMe(arr) {
-    // return arr.map((x) => x.toLowerCase().charAt(0).toUpperCase() + x.slice(1));
-    return arr.map((x) => x.toLowerCase().charAt(0).toUpperCase() + x.slice(1));
-}
+// function capMe(arr) {
+//     // return arr.map((x) => x.toLowerCase().charAt(0).toUpperCase() + x.slice(1));
+//     return arr.map((x) => x.toLowerCase().charAt(0).toUpperCase() + x.slice(1).toLowerCase());
+// }
 
-console.log(capMe(['samuel', 'MABELLE', 'letitia', 'meridith']));
+// console.log(capMe(['samuel', 'MABELLE', 'letitia', 'meridith']));
 
 // capMe(["mavis", "senaida", "letty"]) ➞ ["Mavis", "Senaida", "Letty"]
 
