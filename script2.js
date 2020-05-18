@@ -1,97 +1,56 @@
-// function century(year) {
-//     let suf = '';
-//     if (year > 2000) {
-//         suf = 'st';
-//     } else {
-//         suf = 'th';
+// function evenOddTransform(arr, n) {
+//     return arr.map((x) => (x % 2 === 1 ? x + n * 2 : x + n * -2));
+// }
+
+// console.log(evenOddTransform([1, 2, 3], 1));
+
+// evenOddTransform([3, 4, 9], 3) ➞ [9, -2, 15]
+// // Since [3, 4, 9] => [5, 2, 11] => [7, 0, 13] => [9, -2, 15]
+
+// evenOddTransform([0, 0, 0], 10) ➞ [-20, -20, -20]
+
+// evenOddTransform([1, 2, 3], 1) ➞ [3, 0, 5]
+
+// function XO(str) {
+//     if (!str.includes('x') && !str.includes('o')) {
+//         return true;
 //     }
-//     // return year % 100 === 0 && year < 2001
-//     //     ? `${year / 100}th century`
-//     //     : `${(year / 100).toFixed()}${suf} century`;
-
-//     return String(year / 100).split('.')[1] >= 1
-//         ? `${+String(year / 100).split('.')[0] + 1}${suf} century`
-//         : 'st';
-// }
-
-// console.log(century(1000));
-
-// century(1756) ➞ "18th century"
-
-// century(1555) ➞ "16th century"
-
-// century(1000) ➞ "10th century"
-
-// century(1001) ➞ "11th century"
-
-// century(2005) ➞ "21st century"
-
-// const cmsSelector = (arr, str) => arr.filter((x) => x.toLowerCase().includes(str));
-
-// console.log(cmsSelector(['WordPress', 'Joomla', 'Drupal', 'Magento'], ''));
-
-// cmsSelector(['WordPress', 'Joomla', 'Drupal' ], 'w') ➞ ['WordPress']
-
-// cmsSelector(['WordPress', 'Joomla', 'Drupal', 'Magento' ], 'ru') ➞ ['Drupal']
-
-// cmsSelector(['WordPress', 'Joomla', 'Drupal', 'Magento' ], '') ➞ ['Drupal', 'Joomla', 'Magento', 'WordPress']
-
-// const equation = (s) => eval(s);
-
-// console.log(equation('1+1'));
-
-// equation("1+1") ➞ 2
-
-// equation("7*4-2") ➞ 26
-
-// equation("1+1+1+1+1") ➞ 5
-
-// function returnEndOfNumber(num) {
-//     return /[4-9]0/.test(String(num).split('').pop())? `${num}-TH` :
-//     ? ;
-// }
-
-// console.log(returnEndOfNumber(34));
-
-// returnEndOfNumber(553) ➞ "553-RD"
-
-// returnEndOfNumber(34) ➞ "34-TH"
-
-// returnEndOfNumber(1231) ➞ "1231-ST"
-
-// returnEndOfNumber(22) ➞ "22-ND"
-
-// function changeTypes(arr) {
-//     let newArr = [];
-//     let newStr = '';
-//     for (let i = 0; i < arr.length; i++) {
-//         if (typeof arr[i] === 'string') {
-//             newArr.push(arr[i]);
-//         }
+//     if (
+//         (!str.includes('x') && str.includes('o')) ||
+//         (str.includes('x') && !str.includes('o'))
+//     ) {
+//         return false;
 //     }
-//     return newArr;
-// }
-
-// console.log(changeTypes(['a', 12, true]));
-
-// changeTypes(["a", 12, true]) ➞ ["A!", 13, false]
-
-// changeTypes([13, "13", "12", "twelve"]) ➞ [13, "13!", "12!", "Twelve!"]
-
-// changeTypes([false, "false", "true"]) ➞ [true, "False!", "True!"]
-
-// function tpChecker(home) {
-//     let amountNeeded = home.people * 57 * 14;
-//     let amountHave = home.tp * 500;
-//     let tpSupplyLen = Math.floor(amountHave / (amountNeeded / 14));
-//     if (amountNeeded > amountHave) {
-//         return `Your TP will only last ${tpSupplyLen} days, buy more!`;
+//     if (str.includes('x') && str.includes('o')) {
+//         return [...str.toLowerCase()].sort().join('');
 //     }
-//     return `Your TP will last ${tpSupplyLen} days, no need to panic!`;
+
+//     return str;
 // }
 
-// console.log(tpChecker({ people: 2, tp: 4 }));
+// console.log(XO('ooxx'));
 
-// {people: 4, tp:1} ➞ "Your TP will only last 2 days, buy more!"
+// XO("ooxx") ➞ true
 
-// {people: 3, tp:20} ➞ "Your TP will last 58 days, no need to panic!"
+// XO("xooxx") ➞ false
+
+// XO("ooxXm") ➞ true
+// // Case insensitive.
+
+// XO("zpzpzpp") ➞ true
+// // Returns true if no x and o.
+
+// XO("zzoo") ➞ false
+
+function capMe(arr) {
+    // return arr.map((x) => x.toLowerCase().charAt(0).toUpperCase() + x.slice(1));
+    return arr.map((x) => x.toLowerCase().charAt(0).toUpperCase() + x.slice(1));
+}
+
+console.log(capMe(['samuel', 'MABELLE', 'letitia', 'meridith']));
+
+// capMe(["mavis", "senaida", "letty"]) ➞ ["Mavis", "Senaida", "Letty"]
+
+// capMe(["samuel", "MABELLE", "letitia", "meridith"]) ➞ ["Samuel", "Mabelle", "Letitia", "Meridith"]
+
+// capMe(["Slyvia", "Kristal", "Sharilyn", "Calista"]) ➞ ["Slyvia", "Kristal", "Sharilyn", "Calista"]
