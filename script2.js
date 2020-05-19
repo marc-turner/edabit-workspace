@@ -34,11 +34,11 @@
 
 // stringInt("12") ➞ 12
 
-function doubleLetters(word) {
-    return /(\w{2})/gi.test(word);
-}
+// function doubleLetters(word) {
+//     return /(\w{2})/gi.test(word);
+// }
 
-console.log(doubleLetters('orange'));
+// console.log(doubleLetters('orange'));
 
 // doubleLetters("loop") ➞ true
 
