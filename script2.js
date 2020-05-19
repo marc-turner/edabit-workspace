@@ -1,56 +1,49 @@
-// function evenOddTransform(arr, n) {
-//     return arr.map((x) => (x % 2 === 1 ? x + n * 2 : x + n * -2));
+// function smashFactor(bs, cs) {
+//     return (bs / cs).toFixed(2);
 // }
 
-// console.log(evenOddTransform([1, 2, 3], 1));
+// console.log(smashFactor(139.4, 93.8));
 
-// evenOddTransform([3, 4, 9], 3) ➞ [9, -2, 15]
-// // Since [3, 4, 9] => [5, 2, 11] => [7, 0, 13] => [9, -2, 15]
+// smashFactor(139.4, 93.8) ➞ 1.49
 
-// evenOddTransform([0, 0, 0], 10) ➞ [-20, -20, -20]
+// smashFactor(181.2, 124.5) ➞ 1.46
 
-// evenOddTransform([1, 2, 3], 1) ➞ [3, 0, 5]
+// smashFactor(154.7, 104.3) ➞ 1.48
 
-// function XO(str) {
-//     if (!str.includes('x') && !str.includes('o')) {
-//         return true;
-//     }
-//     if (
-//         (!str.includes('x') && str.includes('o')) ||
-//         (str.includes('x') && !str.includes('o'))
-//     ) {
-//         return false;
-//     }
-//     if (str.includes('x') && str.includes('o')) {
-//         return [...str.toLowerCase()].sort().join('');
-//     }
-
-//     return str;
+// function eq(evaluate) {
+//     return eval(evaluate);
 // }
 
-// console.log(XO('ooxx'));
+// console.log(eq('3+2-4'));
 
-// XO("ooxx") ➞ true
+// eq("1+2") ➞ 3
 
-// XO("xooxx") ➞ false
+// eq("6/(9-7)") ➞ 3
 
-// XO("ooxXm") ➞ true
-// // Case insensitive.
+// eq("3+2-4") ➞ 1
 
-// XO("zpzpzpp") ➞ true
-// // Returns true if no x and o.
-
-// XO("zzoo") ➞ false
-
-// function capMe(arr) {
-//     // return arr.map((x) => x.toLowerCase().charAt(0).toUpperCase() + x.slice(1));
-//     return arr.map((x) => x.toLowerCase().charAt(0).toUpperCase() + x.slice(1).toLowerCase());
+// function stringInt(str) {
+//     return +str;
 // }
 
-// console.log(capMe(['samuel', 'MABELLE', 'letitia', 'meridith']));
+// console.log(stringInt('6'));
 
-// capMe(["mavis", "senaida", "letty"]) ➞ ["Mavis", "Senaida", "Letty"]
+// stringInt("6") ➞ 6
 
-// capMe(["samuel", "MABELLE", "letitia", "meridith"]) ➞ ["Samuel", "Mabelle", "Letitia", "Meridith"]
+// stringInt("1000") ➞ 1000
 
-// capMe(["Slyvia", "Kristal", "Sharilyn", "Calista"]) ➞ ["Slyvia", "Kristal", "Sharilyn", "Calista"]
+// stringInt("12") ➞ 12
+
+function doubleLetters(word) {
+    return /(\w{2})/gi.test(word);
+}
+
+console.log(doubleLetters('orange'));
+
+// doubleLetters("loop") ➞ true
+
+// doubleLetters("yummy") ➞ true
+
+// doubleLetters("orange") ➞ false
+
+// doubleLetters("munchkin") ➞ false
