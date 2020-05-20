@@ -1,101 +1,51 @@
-// function censor(str) {
-//     return str
-//         .split(' ')
-//         .map((x) => (x.length <= 4 ? x : x.replace(/[\w]/gi, '*')))
-//         .join(' ');
+// function footballPoints(wins, draws, losses) {
+//     return wins * 3 + draws;
 // }
 
-// console.log(censor('The code is fourty'));
+// console.log(footballPoints(3, 4, 2));
 
-// censor("The code is fourty") ➞ "The code is ******"
+// footballPoints(3, 4, 2) ➞ 13
 
-// censor("Two plus three is five") ➞ "Two plus ***** is five"
+// footballPoints(5, 0, 2) ➞ 15
 
-// censor("aaaa aaaaa 1234 12345") ➞ "aaaa ***** 1234 *****"
+// footballPoints(0, 0, 1) ➞ 0
 
-// function getEquivalent(note) {
-//     let sharpArr = ['C#', 'D#', 'F#', 'G#', 'A#'];
-//     let flatArr = ['Db', 'Eb', 'Gb', 'Ab', 'Bb'];
-//     return sharpArr.includes(note)
-//         ? flatArr[sharpArr.indexOf(note)]
-//         : sharpArr[flatArr.indexOf(note)];
+// var result = ""
+
+// let promise = new Promise((resolve, rej) => {
+//     setTimeout(() => {
+//         resolve(result="success!");
+//     },1000)
+// }).then(data => {
+//     console.log(data);
+// })
+
+// function matchLastItem(arr) {
+//     return arr.slice(0, arr.length - 1).join('') === arr.pop();
 // }
 
-// console.log(getEquivalent('Bb'));
+// console.log(matchLastItem([8, 'thunder', true, '8thundertrue']));
 
-// getEquivalent("D#") ➞ "Eb"
+// matchLastItem(["rsq", "6hi", "g", "rsq6hig"]) ➞ true
+// // The last item is the rest joined.
 
-// getEquivalent("Gb") ➞ "F#"
+// matchLastItem([1, 1, 1, "11"]) ➞ false
+// // The last item should be "111".
 
-// getEquivalent("Bb") ➞"A#"
+// matchLastItem([8, "thunder", true, "8thundertrue"]) ➞ true
 
-// const longBurp = (num) => 'Bu' + 'r'.repeat(num) + 'p';
+// Find how many tabs with one literal whitespace immediately following the tab are in a string.
 
-// console.log(longBurp(5));
-
-// longBurp(3) ➞ "Burrrp"
-
-// longBurp(5) ➞ "Burrrrrp"
-
-// longBurp(9) ➞ "Burrrrrrrrrp"
-
-// const diceGame = (arr) =>
-//     arr.every((x) => x[0] !== x[1]) ? arr.flat().reduce((a, c) => a + c) : 0;
-
-// console.log(
-//     diceGame([
-//         [1, 1],
-//         [5, 6],
-//         [6, 4],
-//     ])
-// );
-
-// diceGame([[1, 2], [3, 4], [5, 6]]) ➞ 21
-
-// diceGame([[1, 1], [5, 6], [6, 4]]) ➞ 0
-
-// diceGame([[4, 5], [4, 5], [4, 5]]) ➞ 27
-
-// const filterUnique = (arr) => arr.filter((x) => new Set(x).size === x.length);
-
-// console.log(filterUnique(['88', '999', '989', '9988', '9898']));
-
-// filterUnique(["abb", "abc", "abcdb", "aea", "bbb"]) ➞ ["abc"]
-// // "b" occurs in "abb" more than once, "b" occurs in "abcdb" more than once, etc.
-
-// filterUnique(["88", "999", "989", "9988", "9898"]) ➞ []
-
-// filterUnique(["ABCDE", "DDEB", "BED", "CCA", "BAC"]) ➞ ["ABCDE", "BED", "BAC"]
-
-// const testJackpot = (result) => new Set(result).size === 1;
-
-// console.log(testJackpot(['&&', '&', '&&&', '&&&&']));
-
-// testJackpot(["@", "@", "@", "@"]) ➞ true
-
-// testJackpot(["abc", "abc", "abc", "abc"]) ➞ true
-
-// testJackpot(["SS", "SS", "SS", "SS"]) ➞ true
-
-// testJackpot(["&&", "&", "&&&", "&&&&"]) ➞ false
-
-// testJackpot(["SS", "SS", "SS", "Ss"]) ➞ false
-
-// Fix this broken code!
-// function checkEquals(arr1, arr2) {
-//     if (arr1.toString() === arr2.toString()) {
-//         return true;
-//     } else {
-//         return false;
-//     }
+// function makeTitle(str) {
+//     return str.split(' ').map((x) => x[0].toUpperCase() + x.slice(1));
 // }
 
-// console.log(checkEquals([1, 2], [1, 2]));
+// console.log(makeTitle('PIZZA PIZZA PIZZA'));
 
-// checkEquals([1, 2], [1, 3]) ➞ false
+// makeTitle("This is a title") ➞ "This Is A Title"
 
-// checkEquals([1, 2], [1, 2]) ➞ true
+// makeTitle("capitalize every word") ➞ "Capitalize Every Word"
 
-// checkEquals([4, 5, 6], [4, 5, 6]) ➞ true
+// makeTitle("I Like Pizza") ➞ "I Like Pizza"
 
-// checkEquals([4, 7, 6], [4, 5, 6]) ➞ false
+// makeTitle("PIZZA PIZZA PIZZA") ➞ "PIZZA PIZZA PIZZA"
