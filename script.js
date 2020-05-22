@@ -61,11 +61,11 @@
 
 // mean(666) ➞ 6
 
-function removeRepeats(str) {
-    return str;
-}
+// function removeRepeats(str) {
+//     return str;
+// }
 
-console.log(removeRepeats('aaabbbccc'));
+// console.log(removeRepeats('aaabbbccc'));
 
 // removeRepeats("aaabbbccc") ➞ "abc"
 
