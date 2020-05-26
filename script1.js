@@ -47,3 +47,41 @@
 // missingNum([7, 2, 3, 6, 5, 9, 1, 4, 8]) ➞ 10
 
 // missingNum([10, 5, 1, 2, 4, 6, 8, 3, 9]) ➞ 7
+
+// const equal = (a, b, c) =>
+//     new Set([a, b, c]).size === 3
+//         ? 0
+//         : new Set([a, b, c]).size === 1
+//         ? 3
+//         : new Set([a, b, c]).size;
+
+// console.log(equal(3, 4, 1));
+
+// equal(3, 4, 3) ➞ 2
+
+// equal(1, 1, 1) ➞ 3
+
+// equal(3, 4, 1) ➞ 0
+
+// const reverse = (str) => str
+//         .split(' ')
+//         .map((x) => (x.length > 5 ? [...x].reverse().join('') : x))
+//         .join(' ');
+
+// console.log(reverse('The dog is big.'));
+
+// reverse("Reverse") ➞ "esreveR"
+
+// reverse("This is a typical sentence.") ➞ "This is a lacipyt .ecnetnes"
+
+// reverse("The dog is big.") ➞ "The dog is big."
+
+// const factorize = (num) => Array.from(Array(num + 1), (_, i) => i).filter((x) => num % x === 0);
+
+// console.log(factorize(17));
+
+// factorize(12) ➞ [1, 2, 3, 4, 6, 12]
+
+// factorize(4) ➞ [1, 2, 4]
+
+// factorize(17) ➞ [1, 17]
