@@ -1,108 +1,66 @@
-// function unrepeated(str) {
-//     return [...new Set(str)].join('');
+// const filterArray = (arr) => arr.filter((x) => Number.isInteger(x));
+
+// console.log(filterArray([1, 2, 3, 'a', 'b', 4]));
+
+// filterArray([1, 2, 3, "a", "b", 4]) ➞ [1, 2, 3, 4]
+
+// filterArray(["A", 0, "Edabit", 1729, "Python", "1729"]) ➞ [0, 1729]
+
+// filterArray(["Nothing", "here"]) ➞ []
+
+// const isFloatingCharacter = (num) => /^-?\d*\.\d+$/.test(num);
+
+// console.log(isFloatingCharacter('av0.12'));
+
+// isFloatingCharacter("12.12") ➞ true
+
+// isFloatingCharacter("12.") ➞ false
+
+// isFloatingCharacter(".1") ➞ true
+
+// isFloatingCharacter("-.1") ➞ true
+
+// isFloatingCharacter("abc") ➞ false
+
+// Test.assertEquals(isFloatingCharacter('12'), false);
+
+// Test.assertEquals(isFloatingCharacter("av0.12"),false)
+
+// function validateEmail(str) {
+//     return str.indexOf('@') < 1 || str.index;
 // }
 
-// console.log(unrepeated('hello'));
+// console.log(validateEmail('hello@edabit.com'));
 
-// unrepeated("hello")➞ "helo"
+// validateEmail("@gmail.com") ➞ false
 
-// unrepeated("aaaaa")➞ "a"
+// validateEmail("hello.gmail@com") ➞ false
 
-// unrepeated("WWE!!!") ➞ "WE!"
+// validateEmail("gmail") ➞ false
 
-// unrepeated("call 911") ➞ "cal 91"
+// validateEmail("hello@gmail") ➞ false
 
-// function getMiddle(str) {
-//     return str.length === 1
-//         ? str
-//         : str.length % 2 === 0
-//         ? `${str[str.length / 2 - 1]}${str[str.length / 2]}`
-//         : str[Math.floor(str.length / 2)];
-// }
+// validateEmail("hello@edabit.com") ➞ true
 
-// console.log(getMiddle('test'));
+// const uniqueArr = (arr) => [...new Set(arr)].filter((x) => x > 0);
 
-// getMiddle("test") ➞ "es"
+// console.log(uniqueArr([-5, 1, -7, -5, -2, 3, 3, -5, -1, -1]));
 
-// getMiddle("testing") ➞ "t"
+// uniqueArr([-5, 1, -7, -5, -2, 3, 3, -5, -1, -1]) ➞ [1, 3]
 
-// getMiddle("middle") ➞ "dd"
+// uniqueArr([3, -3, -3, 5, 5, -6, -2, -4, -1, 3]) ➞ [3, 5]
 
-// getMiddle("A") ➞ "A"
+// uniqueArr([10, 6, -12, 13, 5, 5, 13, 6, 5]) ➞ [10, 6, 13, 5]
 
-// `${str[str.length / 2 - 1]}${str[str.length / 2]}`
+const nextInLine = (arr, num) =>
+    !arr.length ? 'No array has been selected' : [...arr, num].slice(1);
 
-// function letterAtPosition(n) {
-//     const alpha = 'abcdefghijklmnopqrstuvwxyz';
-//     return n > 0 && n % 1 === 0 ? alpha[n - 1].toLowerCase() : 'invalid';
-// }
+console.log(nextInLine([5, 6, 7, 8, 9], 1));
 
-// console.log(letterAtPosition(4.5));
+// nextInLine([5, 6, 7, 8, 9], 1) ➞ [6, 7, 8, 9, 1]
 
-// letterAtPosition(1) ➞ "a"
+// nextInLine([7, 6, 3, 23, 17], 10) ➞ [6, 3, 23, 17, 10]
 
-// letterAtPosition(26.0) ➞ "z"
+// nextInLine([1, 10, 20, 42 ], 6) ➞ [10, 20, 42, 6]
 
-// letterAtPosition(0) ➞ "invalid"
-
-// letterAtPosition(4.5) ➞ "invalid"
-
-// function removeDups(arr) {
-//     return [...new Set(arr)];
-// }
-
-// console.log(removeDups(['The', 'big', 'cat']));
-
-// removeDups([1, 0, 1, 0]) ➞ [1, 0]
-
-// removeDups(["The", "big", "cat"]) ➞ ["The", "big", "cat"]
-
-// removeDups(["John", "Taylor", "John"]) ➞ ["John", "Taylor"]
-
-// function findZip(str) {
-//     return str.toLowerCase().replace('z', 'x').lastIndexOf('z');
-// }
-
-// console.log(findZip('all zip files are compressed'));
-
-// findZip("all zip files are zipped") ➞ 18
-
-// findZip("all zip files are compressed") ➞ -1
-
-// function reverseImage(image) {
-//     return image.map((x) => x.map((y) => (y === 0 ? (y = 1) : (y = 0))));
-// }
-
-// console.log(
-//     reverseImage([
-//         [1, 0, 0],
-//         [0, 1, 0],
-//         [0, 0, 1],
-//     ])
-// );
-
-// reverseImage([
-//     [1, 0, 0],
-//     [0, 1, 0],
-//     [0, 0, 1]
-//   ]) ➞ [
-//     [0, 1, 1],
-//     [1, 0, 1],
-//     [1, 1, 0]
-//   ]
-
-//   reverseImage([
-//     [1, 1, 1],
-//     [0, 0, 0]
-//   ]) ➞ [
-//     [0, 0, 0],
-//     [1, 1, 1]
-//   ]
-
-//   reverseImage([
-//     [1, 0, 0],
-//     [1, 0, 0]
-//   ]) ➞ [
-//     [0, 1, 1],
-//     [0, 1, 1]
-//   ]
+// nextInLine([], 6) ➞ "No array has been selected"
